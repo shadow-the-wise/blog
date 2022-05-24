@@ -1,0 +1,23 @@
+//------------------------------------------------------------------------------
+// Table
+//------------------------------------------------------------------------------
+
+table, td, th {
+	border: 1px solid;
+	border-color: color(greyscale-color, lightest);
+	text-align: left;
+}
+
+table {
+	border-collapse: collapse;
+	background-color: color(greyscale-color);
+}
+
+th, td {
+	padding: .6rem;
+	text-align: left;
+    }
+
+tr:nth-child(even) {
+	background-color: lighten(color(greyscale-color, lightest), 20%);
+}

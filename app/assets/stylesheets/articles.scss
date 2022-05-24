@@ -1,0 +1,50 @@
+/*
+	Article Index
+*/
+
+
+/*
+	Article Show
+*/
+
+.article_show {
+	flex-direction: column;
+	&__title {
+		font-weight:300;
+        text-align: center;
+        text-transform: uppercase;
+	}
+	&__published {
+		border-bottom:double;
+        text-align: center;
+        margin-bottom:1.5rem;
+	}
+	&__content {
+		flex-direction: column;
+		margin-top:2rem;
+		padding:2rem;
+		font-weight:300;
+        p{
+            font-size: 1.5rem;
+        }
+	}
+	&__img {
+		height:40vh;
+	}
+}
+
+.article-form{
+    &__left{
+        width: calc(100% / 2);
+    }
+    &__right{
+        width: calc(100% / 2);
+    }
+}
+
+
+p > img {
+	height:60vh;
+	padding:2rem;
+}
+

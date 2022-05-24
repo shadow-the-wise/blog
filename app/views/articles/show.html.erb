@@ -1,0 +1,18 @@
+<!-- Begin Published-->
+<div class="article_show__published">
+  <%= date_formatted(@article.published_at) %>
+</div>
+
+<!-- Begin Title-->
+<div class="article_show__title">
+  <h1>
+    <%= @article.title %>
+  </h1>
+</div>
+
+<!--Main Article Image-->
+<%= image_tag(@article.pictures.first.name, class: :"article_show__img") %>
+
+  <div class="article_show__content">
+    <%= markdown(@article.content) %>
+  </div>

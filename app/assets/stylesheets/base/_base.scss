@@ -1,0 +1,74 @@
+html {
+    // base line height
+    line-height: 1.5;
+
+    // Prevent adjustments of font size after orientation changes in iOS.
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body{
+    // font sizing 16px
+	font-size: $base-font-size;
+
+    //style 'Roboto', sans-serif;
+	font-family: $primary-font;
+
+    // links
+	@include linx(color(blue-color));
+
+    // global text color
+	color:color(greyscale-color, darkest);
+
+    // global background color
+	background-color: color(theme, bg);
+
+    // mouse highlight color
+	*::-moz-selection { background-color: color(blue-color);}
+	*::selection { background-color: color(blue-color, light); }
+}
+
+* {
+	margin-top:     0;
+	margin-bottom:  0;
+	padding-top:    0;
+	padding-bottom: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10.
+ * Set the width to 100%
+ */
+
+img{
+	width: 100%;
+	border-style: none;
+}
+
+// global container set via the application.css: container<controller><action>
+.container{
+    // pages
+    &__pages_index{
+        padding: 0rem;
+    }
+    // articles
+    &__articles_index{
+        padding: 5rem;
+    }
+    &__articles_show{
+        padding: 5rem;
+    }
+    &__articles_new{
+        padding: 5rem;
+    }
+    &__articles_edit{
+        padding: 5rem;
+    }
+}
+

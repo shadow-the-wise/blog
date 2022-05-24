@@ -1,0 +1,53 @@
+<%= form_with(model: article) do |form| %>
+  <% if article.errors.any? %>
+    <div style="color: red">
+      <h2>
+        <%= pluralize(article.errors.count, "error" ) %> prohibited this article from being saved:
+      </h2>
+
+      <ul>
+        <% article.errors.each do |error| %>
+          <li>
+            <%= error.full_message %>
+          </li>
+          <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+      <div>
+        <%= form.label :title, style: "display: block" %>
+          <%= form.text_field :title %>
+      </div>
+
+      <br>
+      <div>
+        <%= form.label :categories %><br>
+          <%= form.collection_select(:category_id, Category.all, :id, :name) %>
+      </div>
+
+      <br>
+      <div>
+        <%= form.label :content, style: "display: block" %>
+          <%= form.text_area :content %>
+      </div>
+
+
+      <br>
+      <%= form.fields_for :pictures do |pic| %>
+        <%= form.label :image %><br>
+          <%= pic.text_field :name %>
+            <% end %>
+
+              <br>
+              <br>
+              <div>
+                <%= form.label :published, style: "display: block" %>
+                  <%= form.check_box :published %>
+              </div>
+
+
+              <div>
+                <%= form.submit %>
+              </div>
+              <% end %>

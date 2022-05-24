@@ -1,0 +1,12 @@
+<nav>
+  <div class="logo">
+    My | <span class='nav-blog'>Blog</span>
+  </div>
+
+  <ul class="nav">
+    <%= nav_link "home" , root_path %>
+      <% Category.all.each do |category| %>
+        <%= nav_link category.name, articles_path(category: category.id) %>
+          <% end %>
+  </ul>
+</nav>

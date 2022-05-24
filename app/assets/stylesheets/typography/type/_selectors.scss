@@ -1,0 +1,52 @@
+/*
+    perfect 4th - modular scale
+    scale: 1.333
+    base: 16px == 1rem
+
+    The baseline is determined by the line-height property of the body text. Let’s say
+    your body text has a computed line-height value of 24px. Your baseline is then 24px.
+    Implementing Vertical Rhythm from this point on is simple. There are two rules:
+
+    Set the vertical white space between elements to a multiple of 24px.
+    Set the line-height of all text elements to a multiple of 24px.
+*/
+
+// scale 5
+h1 {
+	font-size: 4.209rem;
+	line-height: 1.5;
+	margin-bottom:1.5rem;
+}
+
+// scale 4
+h2 {
+	font-size: 3.157rem;
+	line-height: 1.5;
+	margin-bottom:1.5rem;
+}
+
+// scale 3
+h3 {
+	font-size: 2.369rem;
+	line-height: 1.5;
+	margin-bottom:.75rem;
+}
+
+// scale 2
+h4 {
+	font-size: 1.777rem;
+	line-height: 1.5;
+	margin-bottom:.75rem;
+}
+
+// scale 1
+h5 {
+	font-size: 1.333rem;
+	line-height: 1.5;
+	margin-bottom:.75rem;
+}
+
+// base
+p {
+	font-size: 1rem;
+}
